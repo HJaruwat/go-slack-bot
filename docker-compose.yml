@@ -3,7 +3,7 @@ services:
   go-bot:
     command: sh -c "go get && go run main.go -e production"
     image: golang:1.8
-    container_name: go-bot
+    container_name: go-slack-bot
     working_dir: /go/src/go-slack-bot
     volumes:
       - ../go-slack-bot:/go/src/go-slack-bot
