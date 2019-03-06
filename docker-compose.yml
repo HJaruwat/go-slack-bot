@@ -1,14 +1,9 @@
 version: '3'
 services:
   go-bot:
-    command: sh -c "go get && go run main.go -e production"
-    image: golang:1.8
-    container_name: go-slack-bot
-    working_dir: /go/src/go-slack-bot
-    volumes:
-      - ../go-slack-bot:/go/src/go-slack-bot
+    build: .
     environment:
-      - SLACK_TOKEN=xoxb-9329002610-389158948503-Rjx15Rh2b2aNDauY6oap0Iz
+      - SLACK_TOKEN=xoxb-568122985680-569209253669-2TgJ5LBcJP4mZCPfKWy3pJy6
     restart: always
 networks:
   default:
